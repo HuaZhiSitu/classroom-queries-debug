@@ -2,7 +2,7 @@ class EnrollmentsController < ApplicationController
   def create
     @enrollment = Enrollment.new
     @enrollment.course_id = params.fetch("query_course_id")
-    @enrollment.student_id = params.fetch("query_student_id")
+    @enrollment.student_id = params.fetch("student_id")
 
     if @enrollment.valid?
       @enrollment.save
